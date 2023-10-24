@@ -4,15 +4,16 @@ import random
 suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
 ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
 
-
+# Create the deck of cards using itertools.product
 deck = list(itertools.product(ranks, suits))
+
+# Shuffle the deck
 random.shuffle(deck)
 
-
+# Print the shuffled deck
 for card in deck:
     card_rank, card_suit = card
-    print(f"{card_rank} of {card_suit}")
-
+    print("{} of {}".format(card_rank, card_suit))
 
 
 # Output:
